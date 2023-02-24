@@ -50,8 +50,9 @@ const NavBar = () => {
 <p>& Orders</p>
     </div>
     {/*  */}
-    <div className='flex hover:border hover:border-white p-1 items-end '>
-        <BsCart2 size={25}/>
+    <div className='flex hover:border hover:border-white p-1 items-end relative'>
+        <span className='absolute top-1 right-11  text-orange-500'>0</span>
+        <BsCart2 size={25} className='mt-3'/>
         <h1>Cart</h1>
     </div>
     </div>
