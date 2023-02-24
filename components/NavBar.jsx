@@ -6,13 +6,13 @@ import {SlLocationPin} from 'react-icons/sl'
 const NavBar = () => {
   return (
 
-    <div className='bg-[#252F25] text-white flex items-center'>
+    <div className='bg-[#252F25] text-white flex items-center p-1'>
         {/* logo */}
         <div>
-<Image width={160} height={160} src={amazon} className='' />
+<Image width={160} height={160} src={amazon} className='cursor-pointer hover:border hover:border-white'  />
         </div>
         {/* select your field */}
-    <div className=''>
+    <div className='cursor-pointer hover:border hover:border-white'>
         <div>
         <p>Hello</p>
         </div>
