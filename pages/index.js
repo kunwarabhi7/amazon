@@ -1,3 +1,4 @@
+import Hero from '@/components/Hero'
 import LowerNav from '@/components/LowerNav'
 import NavBar from '@/components/NavBar'
 import Head from 'next/head'
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
      <NavBar />
      <LowerNav />
+     <Hero />
     </>
   )
 }
