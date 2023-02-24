@@ -12,7 +12,7 @@ const SearchBar = () => {
      <AiFillCaretDown />
 </div>
      <input type="text"  className='w-[767px] h-10 p-1' placeholder='Search Amazon.in'/>
-     <BsSearch size={30} className='bg-[rgb(243,168,71)]  p-1 text-black w-16 h-10 ' />
+     <BsSearch size={30} className='bg-[rgb(243,168,71)]  p-1 text-black w-16 h-10 rounded-lg' />
     </div>
   )
 }
