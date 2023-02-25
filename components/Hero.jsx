@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const Hero = () => {
   return (
-    <div className="mx-4 bg-[rgb(227,230,230)]">
+    <div className="mx-4 bg-[rgb(227,230,230)] relative">
          <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false}>
                 <div>
                     <img loading="lazy" src="https://m.media-amazon.com/images/I/71LbHsact9L._SX3000_.jpg" />
