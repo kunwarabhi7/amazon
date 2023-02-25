@@ -4,11 +4,15 @@ import {SlLocationPin} from 'react-icons/sl'
 import SearchBar from './SearchBar'
 import {AiFillCaretDown} from 'react-icons/ai'
 import {BsCart2} from 'react-icons/bs'
+import {signIn,signOut,useSession} from 'next-auth/react'
 
 const NavBar = () => {
+const {data:session}  = useSession()
+
+
   return (
 
-    <div className='bg-[#252F25] text-white flex justify-evenly items-center p-1 font-semibold'>
+    <div className='bg-[#252F25] text-white flex justify-evenly items-center p-1 cursor-pointer font-semibold'>
         {/* logo */}
         <div>
 <Image width={160} height={160} src={amazon} className='cursor-pointer w-32 hover:border hover:border-white'  />
@@ -20,8 +24,8 @@ const NavBar = () => {
         </div>
         <div>
 
-        <p className='text-gray-400'>Deliver to Abhishek</p>
-            <p className='font-bold text-sm '>Jaipur 302018</p>
+        <p className='text-gray-400 text-xs'>{session? `Deliver to ${session.user.name.slice(0,10)}` : 'Hello'} </p>
+            <p className='font-bold text-xs '>{session? ` Jaipur 302018` : 'Select your address'}</p>
         </div>
         
     </div>
@@ -34,10 +38,11 @@ const NavBar = () => {
 <AiFillCaretDown />
     </div>
     {/* User details */}
-    <div className='hover:border hover:border-white p-1'>
+    <div onClick={!session? signIn : signOut} className='hover:border hover:border-white p-1'>
         <div className='flex'>
             <h1>Hello,</h1>
-            <p>Abhishek</p>
+            {session?            <p className='text-xs mt-1 ml-1'>{session.user.name}</p>:            <p>sign in</p>}
+
         </div>
         <div className='flex items-center'>
         <h1>Account & Lists</h1>
