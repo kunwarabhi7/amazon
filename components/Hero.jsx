@@ -27,6 +27,9 @@ const Hero = () => {
                 <div>
                     <img loading="lazy"  src="https://m.media-amazon.com/images/I/71vdTR50hFL._SX3000_.jpg" />
                 </div>
+                <div>
+                    <img loading="lazy"  src="https://m.media-amazon.com/images/I/81aKds7BOeL._SX3000_.jpg" />
+                </div>
             </Carousel>
     </div>
   )
