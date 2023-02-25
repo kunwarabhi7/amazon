@@ -4,11 +4,13 @@ import React from 'react'
 
 const cart = () => {
   return (
-    <div>
+    <div className='bg-red-500'>
       <NavBar />
       <LowerNav />
-      
-    </div>
+      <div>
+
+      </div>
+    </div> 
   )
 }
 
