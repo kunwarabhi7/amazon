@@ -5,6 +5,9 @@ import SearchBar from './SearchBar'
 import {AiFillCaretDown} from 'react-icons/ai'
 import {BsCart2} from 'react-icons/bs'
 import {signIn,signOut,useSession} from 'next-auth/react'
+import Link from 'next/link'
+
+
 
 const NavBar = () => {
 const {data:session}  = useSession()
@@ -15,7 +18,9 @@ const {data:session}  = useSession()
     <div className='bg-[#252F25] text-white flex justify-evenly items-center p-1 cursor-pointer font-semibold'>
         {/* logo */}
         <div>
+            <Link href='/'>
 <Image width={160} height={160} src={amazon} className='cursor-pointer w-32 hover:border hover:border-white'  />
+            </Link>
         </div>
         {/* select your field */}
     <div className='cursor-pointer  items-center flex hover:border text-xs hover:border-white w-[140px] h-13'>
@@ -24,7 +29,7 @@ const {data:session}  = useSession()
         </div>
         <div>
 
-        <p className='text-gray-400 text-xs'>{session? `Deliver to ${session.user.name.slice(0,10)}` : 'Hello'} </p>
+        <p className='text-gray-400 text-xs'>{session? `Deliver to ${session.user.name.slice(0,8)}` : 'Hello'} </p>
             <p className='font-bold text-xs '>{session? ` Jaipur 302018` : 'Select your address'}</p>
         </div>
         
@@ -38,10 +43,10 @@ const {data:session}  = useSession()
 <AiFillCaretDown />
     </div>
     {/* User details */}
-    <div onClick={!session? signIn : signOut} className='hover:border hover:border-white p-1'>
+    <div onClick={!session? signIn : signOut} className='hover:border hover:border-white p-1 '>
         <div className='flex'>
             <h1>Hello,</h1>
-            {session?            <p className='text-xs mt-1 ml-1'>{session.user.name}</p>:            <p>sign in</p>}
+            {session?            <p className='text-xs mt-1 ml-1'>{session.user.name.slice(0,8)}</p>:            <p>sign in</p>}
 
         </div>
         <div className='flex items-center'>
@@ -56,9 +61,11 @@ const {data:session}  = useSession()
     </div>
     {/*  */}
     <div className='flex hover:border hover:border-white p-1 items-end relative'>
-        <span className='absolute top-1 right-11  text-orange-500'>0</span>
+      <Link href='/cart'>
+        <span className='absolute top-1 right-4  text-orange-500'>0</span>
         <BsCart2 size={25} className='mt-3'/>
         <h1>Cart</h1>
+      </Link>
     </div>
     </div>
   )
