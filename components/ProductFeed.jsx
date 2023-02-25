@@ -2,8 +2,8 @@ import React from 'react'
 import ProductCard from './ProductCard'
 
 const ProductFeed = ({ products }) => (
-    <>
-      {products.map(({ category, description, id, image, price, title }) => (
+    <div className='grid grid-cols-4 gap-5 bg-[rgb(227,230,230)] '>
+      {products.map(({ category, description, id, image, price, title ,rating}) => (
         <ProductCard
           key={id}
           category={category}
@@ -11,8 +11,10 @@ const ProductFeed = ({ products }) => (
           image={image}
           price={price}
           title={title}
+          rating={rating.rate}
         />
       ))}
-    </>
+    </div>
   );
+
 export default ProductFeed
