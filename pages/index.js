@@ -1,10 +1,12 @@
 import Hero from '@/components/Hero'
 import LowerNav from '@/components/LowerNav'
 import NavBar from '@/components/NavBar'
+import ProductFeed from '@/components/ProductFeed'
 import Head from 'next/head'
 
 
-export default function Home() {
+export default function Home({products}) {
+  console.log(products)
   return (
     <>
       <Head>
@@ -16,6 +18,18 @@ export default function Home() {
      <NavBar />
      <LowerNav />
      <Hero />
+     <ProductFeed products={products} />
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+ const products =await fetch('https://fakestoreapi.com/products').then((res)=>(
+  res.json()
+ ))
+  return {
+    props: {
+      products,
+    },
+  };
 }
