@@ -12,7 +12,10 @@ const cart = () => {
     <>
       <NavBar />
       <LowerNav />
+      <div className="bg-[rgb(234,237,237)]">
+
       {!session?.user ? <EmptyCart /> :<FullCart />}
+      </div>
     
    
     </>
