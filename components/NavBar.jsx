@@ -6,13 +6,15 @@ import {AiFillCaretDown} from 'react-icons/ai'
 import {BsCart2} from 'react-icons/bs'
 import {signIn,signOut,useSession} from 'next-auth/react'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
+import { selectItems } from '@/slices/basketSlices'
 
 
 
 const NavBar = () => {
 const {data:session}  = useSession()
-
-
+const items = useSelector(selectItems)
+console.log(items)
   return (
 
     <div className='bg-[#252F25] text-white flex justify-evenly items-center p-1 cursor-pointer font-semibold'>
@@ -62,7 +64,7 @@ const {data:session}  = useSession()
     {/*  */}
     <div className='flex hover:border hover:border-white p-1 items-end relative'>
       <Link href='/cart'>
-        <span className='absolute top-1 right-4  text-orange-500'>0</span>
+        <span className='absolute top-1 right-4  text-orange-500'>{items?.length}</span>
         <BsCart2 size={25} className='mt-3'/>
         <h1>Cart</h1>
       </Link>
