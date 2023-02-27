@@ -1,5 +1,7 @@
+import { addToBasket, removeFromBasket } from "@/slices/basketSlices";
 import Image from "next/image";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 const CartItem = ({
   category,
@@ -8,9 +10,24 @@ const CartItem = ({
   image,
   price,
   title,
-  rating,
+  
 }) => {
   const IndianPrize = Math.round(price * 82.93);
+const dispatch =  useDispatch()
+
+  const addItemToCart = () => {
+    const product = {
+      category,
+      description,
+      id,
+      image,
+      price,
+      title,
+     
+    }
+    dispatch(addToBasket(product))
+  };
+  const removeItemFromCart = () => {};
 
   return (
     <div className="flex justify-between  h-[221px] w-[1187px]">
@@ -27,10 +44,10 @@ const CartItem = ({
         <h1 className="w-full">{title}</h1>
         <h1>{category}</h1>
        <div className=" flex space-x-8  ">
-        <button className="bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
+        <button onClick={addItemToCart} className="bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
           Add More
         </button>
-    <button className="bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
+    <button onClick={removeItemFromCart} className="bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
           Remove
         </button>
         </div> 

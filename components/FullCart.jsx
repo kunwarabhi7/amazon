@@ -18,8 +18,8 @@ const FullCart = () => {
       image,
       price,
       title,
-      rating,}) =>(
-    <CartItem description={description} category={category} id={id} key={id} image={image} price={price} title={title} rating={rating.rate} />
+      }) =>(
+    <CartItem description={description} category={category} id={id} key={id} image={image} price={price} title={title}  />
 ))}
 </div>
 <div className='w-[300px] h-[766px] bg-white ml-16'>yo</div>
