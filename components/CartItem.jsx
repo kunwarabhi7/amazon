@@ -26,11 +26,16 @@ const CartItem = ({
       <div className="mt-4  font-bold text-xl w-96">
         <h1 className="w-full">{title}</h1>
         <h1>{category}</h1>
-        <button className=" ml-80 bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
+       <div className=" flex space-x-8  ">
+        <button className="bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
+          Add More
+        </button>
+    <button className="bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
           Remove
         </button>
+        </div> 
       </div>
-      <div className="font-semibold text-xl">₹ {IndianPrize}</div>
+      <div className="font-semibold text-xl m-4">₹ {IndianPrize}</div>
     </div>
   );
 };
