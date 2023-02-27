@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { AiTwotoneStar } from "react-icons/ai";
 
 const CartItem = ({
   category,
@@ -11,17 +10,29 @@ const CartItem = ({
   title,
   rating,
 }) => {
-    const IndianPrize = Math.round(price * 82.93);
+  const IndianPrize = Math.round(price * 82.93);
 
-  return <div className="flex justify-between">
-    <div><Image src={image} alt={title} width={200} height={200}  /></div>
-    <div className="">
-        <h1>{title}</h1>
-        <button>Remove</button>
-
+  return (
+    <div className="flex justify-between  h-[221px] w-[1187px]">
+      <div>
+        <Image
+          src={image}
+          alt={title}
+          width={200}
+          height={200}
+          className="w-[180px] h-[180px]"
+        />
+      </div>
+      <div className="mt-4  font-bold text-xl w-96">
+        <h1 className="w-full">{title}</h1>
+        <h1>{category}</h1>
+        <button className=" ml-80 bg-[rgb(255,216,20)] rounded-full mt-7  px-4 py-3 text-xs sm:text-sm hover:bg-yellow-400 hover:border hover:border-blue-500">
+          Remove
+        </button>
+      </div>
+      <div className="font-semibold text-xl">₹ {IndianPrize}</div>
     </div>
-    <div className="font-semibold text-xl">₹ {IndianPrize}</div>
-  </div>;
+  );
 };
 
 export default CartItem;
