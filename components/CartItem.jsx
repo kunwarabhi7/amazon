@@ -27,7 +27,9 @@ const dispatch =  useDispatch()
     }
     dispatch(addToBasket(product))
   };
-  const removeItemFromCart = () => {};
+  const removeItemFromCart = () => {
+    dispatch(removeFromBasket({id}))
+  };
 
   return (
     <div className="flex justify-between  h-[221px] w-[1187px]">
