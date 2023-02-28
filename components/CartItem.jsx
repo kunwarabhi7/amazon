@@ -32,11 +32,8 @@ const dispatch =  useDispatch()
   };
 
   return (
-<<<<<<< HEAD
-    <div className="flex justify-between  h-[221px] w-[1080px]">
-=======
-    <div className="flex justify-between  h-[221px] w-[1187px]">
->>>>>>> f1f46b20d0e685505a640cae9ac53bfd283ea36f
+
+    <div className="flex justify-between  h-[221px] w-[990px] ">
       <div>
         <Image
           src={image}
@@ -58,8 +55,9 @@ const dispatch =  useDispatch()
         </button>
         </div> 
       </div>
-      <div className="font-semibold text-xl m-4">₹ {IndianPrize}</div>
+      <div className="font-semibold text-xl ml-2">₹ {IndianPrize}</div>
     </div>
+   
   );
 };
 

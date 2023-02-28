@@ -2,13 +2,8 @@ import React from 'react'
 
 const EmptyCart = () => {
   return (
-<<<<<<< HEAD
     <div className="bg-[rgb(234,237,237)]  " >
       <div className=" flex justify-center h-[290px] w-[1180px] mt-4 bg-white rounded-md items-center">
-=======
-    <div className="bg-[rgb(234,237,237)] flex " >
-      <div className=" flex justify-center h-[290px] w-[1227px] mt-4 bg-white rounded-md items-center">
->>>>>>> f1f46b20d0e685505a640cae9ac53bfd283ea36f
         <div className="h-[254px] w-[1187px] ml-40">
           <img
             src="https://m.media-amazon.com/images/G/31/cart/empty/kettle-desaturated._CB424694257_.svg"
@@ -30,13 +25,7 @@ const EmptyCart = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       
-=======
-      <div className="bg-white w-[298px] h-[576px] ml-8 mt-4 rounded-md">
-        <p className="font-semibold text-center my-3 text-xl ">Your resently Viewed Items</p>
-      </div>
->>>>>>> f1f46b20d0e685505a640cae9ac53bfd283ea36f
     </div>
   )
 }
