@@ -32,7 +32,11 @@ const dispatch =  useDispatch()
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex justify-between  h-[221px] w-[1080px]">
+=======
+    <div className="flex justify-between  h-[221px] w-[1187px]">
+>>>>>>> f1f46b20d0e685505a640cae9ac53bfd283ea36f
       <div>
         <Image
           src={image}
