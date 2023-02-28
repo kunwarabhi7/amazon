@@ -1,7 +1,13 @@
+import { useSession } from "next-auth/react";
+import Link from "next/link";
 import React from "react";
 import { GiConfirmed } from "react-icons/gi";
+
+
+
 const orderdone = () => {
-  return (
+
+    return (
     <div className="bg-gray-100 h-screen">
       <div className="bg-white h-60  mb-8 mx-96 pt-8">
  <div className="flex items-center px-5">
