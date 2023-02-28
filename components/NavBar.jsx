@@ -17,19 +17,19 @@ const items = useSelector(selectItems)
 console.log(items)
   return (
 
-    <div className='bg-[#252F25] text-white flex justify-evenly items-center p-1 cursor-pointer font-semibold'>
+    <div className='bg-[#252F25] w-full text-white flex justify-evenly items-center p-1 cursor-pointer font-semibold'>
         {/* logo */}
         <div>
             <Link href='/'>
-<Image width={160} height={160} src={amazon} className='cursor-pointer w-32 hover:border hover:border-white'  />
+<Image width={160} height={160} src={amazon} className='cursor-pointer md:w-32 w-16 hover:border hover:border-white '  />
             </Link>
         </div>
         {/* select your field */}
-    <div className='cursor-pointer  items-center flex hover:border text-xs hover:border-white w-[140px] h-13'>
+    <div className='cursor-pointer  items-center flex hover:border text-xs hover:border-white w-16 md:w-[140px] h-13'>
         <div>
-            <SlLocationPin size={20} className='text-white'/>
+            <SlLocationPin size={20} className= ' text-white'/>
         </div>
-        <div>
+        <div className=''>
 
         <p className='text-gray-400 text-xs'>{session? `Deliver to ${session.user.name.slice(0,8)}` : 'Hello'} </p>
             <p className='font-bold text-xs '>{session? ` Jaipur 302018` : 'Select your address'}</p>
@@ -39,9 +39,9 @@ console.log(items)
     {/* Input Bar */}
     <div><SearchBar /></div>
     {/* Country */}
-    <div className='w-18 h-12 flex items-center  mx-4 hover:border hover:border-white p-1 '>
-        <img className='w-6 h-5' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/1024px-Flag_of_India.png'/>
-        <h1 className='font-semibold mx-1' >EN</h1>
+    <div className=' md:w-18 h-5  md:h-12 flex items-center  mx-4 hover:border hover:border-white p-1 w-5 '>
+        <img className='w-9 h-5' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/1024px-Flag_of_India.png'/>
+        <h1 className='font-semibold  mx-1' >EN</h1>
 <AiFillCaretDown />
     </div>
     {/* User details */}
@@ -57,7 +57,7 @@ console.log(items)
         </div>
     </div>
     {/* Return and Order  */}
-    <div className='hover:border w-19 h-[50px] hover:border-white p-1'>
+    <div className='hover:border w-19 h-[50px] md:block hover:border-white p-1 hidden'>
         <p>Returns</p>
 <p>& Orders</p>
     </div>

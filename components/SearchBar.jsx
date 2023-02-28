@@ -4,7 +4,7 @@ import {BsSearch} from  'react-icons/bs'
 
 const SearchBar = () => {
   return (
-    <div className='flex items-center  rounded-lg bg-[rgb(218,218,218)] w-[890px] h-15 ml-3 '>
+    <div className='md:flex items-center hidden  rounded-lg bg-[rgb(218,218,218)] w-[890px] h-15 ml-3 '>
  
 <div className='w-[60px] h-10 px-2 flex text-black font-semibold justify-start items-center'>
 
